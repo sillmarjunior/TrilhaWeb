@@ -1,19 +1,32 @@
 function validaFaleConosco() {
 	if (document.frmfaleconosco.txtnome.value == "") {
-		alert("Preencha o campo Nome.");
+		alert("Preencha o campo, Nome.");
 		document.frmfaleconosco.txtnome.focus();
 		return false;
 	} else if (document.frmfaleconosco.txtfone.value == "") {
-		alert("Preencha o campo Telefone.");
+		alert("Preencha o campo, Telefone.");
 		document.frmfaleconosco.txtfone.focus();
 		return false;
 	} else if (document.frmfaleconosco.txtemail.value == "") {
-		alert("Preencha o campo E-mail.");
+		alert("Preencha o campo, E-mail.");
 		document.frmfaleconosco.txtemail.focus();
+		return false;
+	} else if (document.frmfaleconosco.selmotivo.value == "") {
+		alert("Escolha uma opção no campo, Motivo.");
+		document.frmfaleconosco.selmotivo.focus();
+		return false;
+	} else if (document.frmfaleconosco.selmotivo.value == "PR" && document.frmfaleconosco.selproduto.value == "") {
+		alert("Escolha uma opção no segundo campo, Motivo.");
+		document.frmfaleconosco.selproduto.focus();
+		return false;
+	} else if (document.frmfaleconosco.txtcomentario.value == "") {
+		alert("Preencha o campo, Comentário.");
+		document.frmfaleconosco.txtcomentario.focus();
 		return false;
 	}
 	return true;
 }
+
 
 function verificaMotivo(motivo) {
 	var elemento = document.getElementById("opcaoProduto");
